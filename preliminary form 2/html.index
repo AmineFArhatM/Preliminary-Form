@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+      <form action="">
+          <div class="outter">
+              
+             
+              <div class="titlex">
+                  <h1>Login Form</h1>
+              </div>
+   
+              <div class="inputx">
+                  <input id='name' name='name' placeholder="EMail or phone number" required="">
+              </div>
+              <div class="inputx">
+                  <input id='password' name='password' type='password' placeholder="Password" required=""> 
+              </div>
+              <div class="lin">
+              <a href='www.aze.tn'>Forgot Password?</a>
+              </div>
+              <div class="bp">
+                  <button type='submit'>Login</button>
+            <div class="signup">
+              <p>Not a member yet ? <a href='www.aa.bb'>SIgnUp now </a></p>
+            </div>
+              </div>
+          </div>
+
+
+
+      </form>
+
+  </body>
+</html>

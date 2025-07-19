@@ -1,0 +1,27 @@
+body{background-color: rgb(235,235,235);}
+.outter{max-width: 600px;margin :50px auto;background-color:white;
+padding:20px;border-radius:10px;box-shadow:rgba(1,1,1,0.4)}
+h1{margin:20px 10px 0px 10px;margin-bottom:40px}
+.small{font-size:18px;}
+.form_outter{
+    display:grid;
+    gap:20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));}
+.form_x{
+    display: flex;
+    flex-direction:column ;
+}
+label{margin-bottom: 5px;font-size:16px;}
+input,select{padding:5px;font-size:13px;margin-bottom:10px}
+input,select,textarea:focus{outline-color:tomato;}
+
+button{color: white;background-color: tomato;padding:10px;
+border-radius:8px;}
+button:hover{transition:0.2s ease-out;background-color: lightblue;cursor: pointer;}
+
+.button_x {
+  display: flex;
+
+  justify-content: flex-end;
+  margin-top: 20px;
+}

@@ -1,0 +1,12 @@
+body height is not automatically set to 100% , you have to set it to 100% or 100vh
+
+you can set a buton inside input only with display absolute and place it with top , left ...
+
+try to not set containers to fixed value, like height:300px ,use relative value like min height , ma xheight , % ....
+
+when you use display:initial , in many cases you get display:inline
+
+Button types **inside forms:
+type="submit" (default) - submits the form
+type="button" - just a clickable button, no form action
+type="reset" - clears form fields

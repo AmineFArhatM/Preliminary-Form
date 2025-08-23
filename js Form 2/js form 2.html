@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Damdam</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {margin:0;padding: 0;box-sizing: border-box;font-family: 'Poppins';}
+body{height: 100vh;width: 100%;background-color: black;
+display: flex;justify-content: center;align-items: center;}
+.container{
+    min-height: 200px;max-width: 450px;background-color: white;margin:0 auto;padding:20px;text-align: center;box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.205);
+    border-radius: 8px;}
+h2{font-size: 24px;}
+input{
+    margin:20px auto;
+    padding: 10px 20px;
+    width:90%;
+    font-size: 20px;
+    outline: none;}
+form {position: relative;}
+#span1{
+    position: absolute;
+    right:30px;
+    bottom:30px;
+    font-size: 16px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid red;
+    color: red;
+    text-align: center;
+    display: none;
+    outline: none;
+    height: 25px;
+    width: 25px;    
+    line-height: 25px;}
+#span2{
+    position: absolute;
+    right:30px;
+    bottom:30px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid green;
+    color: green;
+    display: none;
+    outline:none;
+    height: 25px;
+    width: 25px;
+    line-height: 25px;}  
+button{
+    width:90%;
+    padding:8px 16px;
+    margin:10px auto;
+    background-color: green;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 0;
+    cursor: pointer;
+    display: none;}
+.errortext{
+    width:90%;
+    padding:10px;
+    font-size: 20px;
+    color: white;
+    background-color: red;
+    margin:0 auto;
+    border-radius: 5px;
+    position: relative;    
+    display: none;}
+.errortext::before{
+    content: '';
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    background-color: red;
+    right:20px;
+    top:-7px;
+    transform: rotate(45deg);
+}
+
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <h2>Email Validation Check in HTML CSS & JavaScript</h2>
+        <form>
+                <input placeholder="Enter Email" id="inp" oninput="check()">
+                <span id="span1" class="icon1 fas fa-exclamation"></span>
+                <span id="span2" class="icon2 fas fa-check"></span>
+        </form>
+        <button type="button" id="btn">SUbmit</button>
+        <div class="errortext" id="error">Please enter valid email adress</div>
+
+    </div>
+    <script>
+        const inp = document.getElementById('inp')
+        const span1 = document.getElementById('span1')
+        const span2 = document.getElementById('span2')
+        const btn = document.getElementById('btn')
+        const error = document.getElementById('error')
+        let regExp = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+        function check(){
+            span1.style.display='none'      
+            span2.style.display='none'
+            btn.style.display='none'
+            error.style.display='none'   
+            if (inp.value.match(regExp)){
+                inp.style.borderColor='#27ae60'
+                inp.style.backgroundColor='#eafaf1'
+                span2.style.display='block'   
+                btn.style.display='initial' }
+            else if(inp.value!=''){
+                inp.style.borderColor='#e74c3c'
+                inp.style.backgroundColor='#fceae9'
+                span1.style.display='block'
+                error.style.display='block'}
+            else{
+                inp.style.borderColor='initial'
+                inp.style.backgroundColor='initial'}
+        }
+    </script>
+</body>
+</html>

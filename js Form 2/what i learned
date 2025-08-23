@@ -2,3 +2,5 @@ in every absolute positionning , you should wrap all the posiitonning elements i
 why ? because once the page height/width changes , the positionning is ruined
 
 you can create almost every simple shape whith apsolute/relative positionning , so , never get stucked when u face one
+
+how to make a perfect icon ? ==>  height = width = line-height

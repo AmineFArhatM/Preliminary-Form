@@ -1,0 +1,2 @@
+in every absolute positionning , you should wrap all the posiitonning elements inside a container
+why ? because once the page height/width changes , the positionning is ruined

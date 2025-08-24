@@ -1,0 +1,11 @@
+element.children          vs        element.childnodes
+all *element children               all children (element children , text node , comment node ...) 
+
+when using icons , better set the height and the width 
+
+< div class='a b'> ya3ni div a3tih les 2 classes
+
+element.class Name = '...' ====> fassa5 les class lkol w a3tih l class edheka 
+
+CSS   :     .a.b{4444} only element li 3andou a and be . here its like AND operation 
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+</head>
+<body>
+    <div class="container">
+
+    <h1>Damdam Form</h1>
+
+    <div class="emailcontainer">
+        <input  required>
+        <pre>  Enter Email  </pre>
+    </div>
+
+    <div class="passwordcontainer">
+        <input class="inpp" type="password" oninput="removethebtn()" required>
+        <pre>  Enter password  </pre>
+        <div id="showbtn" onclick="change()">Show</div>
+    </div>
+    <div  class="buttoncontainer0">
+            <div class="inner"></div>
+            <button class="fbutton">Login</button>
+    </div>
+
+    <p class="plogin">Or login with</p>
+    <div class="buttoncontainer">
+        <button>Facebook</button>
+        <button>google</button>
+    </div>
+    <p class="member">not a member yet? <a href="+">Signup now</a> </p>
+    </div>
+
+
+    <script>
+        const input = document.querySelector('.inpp')
+        const showbtn = document.querySelector('#showbtn')
+        function change(){
+            if (input.type=='password'){
+                input.type='text'
+                showbtn.textContent='Hide'
+            }
+            else{
+                input.type='password'
+                showbtn.textContent='Show'
+            }
+        }
+        function removethebtn(){
+            if (input.value==''){showbtn.style.display='none'}
+            else{showbtn.style.display='block'}
+        }
+    </script>
+</body>
+</html>

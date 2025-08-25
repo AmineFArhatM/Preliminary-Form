@@ -5,11 +5,5 @@ when facing a hard problem to build , better use a container for it (placeholder
 
 user-select:none  (maysirech select m3a double click
 
-pointer-event:none , ignored completely bu cursor
-
-
-
-
-
-
+pointer-event:none ,  completely ignored by cursor
 

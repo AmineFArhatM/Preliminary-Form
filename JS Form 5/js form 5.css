@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', arial;
+}
+body{
+    height: 100vh;
+    max-width: 100%;
+    background-image: url('file:///C:/Users/M.D/Desktop/projects%20files/Animated%20Login%20Form%20[CSS]%202.1/bg.jpg');
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    min-height: 620px;
+    width: 400px;
+    background-color: white;
+    padding:50px 40px;
+    text-align: center;
+}
+h1{
+    margin:40px auto;
+    text-align: center;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+input{
+        padding:10px 20px;
+        font-size: 20px;
+        width:100%;
+        outline: none;
+        border: 1ps solid grey;
+}
+
+.plogin{
+    color: grey;
+    font-size: 20px;
+    text-align: center;
+    width:100%;
+    margin:10px auto;
+    margin-top: 30px;
+}
+.buttoncontainer{
+    display: flex;
+    gap:30px;
+    justify-content: space-around;
+    align-items: center;
+    width:100%;
+    margin:20px auto;
+    
+}
+.buttoncontainer button{
+    height: 40px;
+    width:120px;
+    font-size: 18px;
+    background-color: white;
+    border: 1px solid black;
+    outline: none;
+    font-weight: 600;
+}
+.buttoncontainer :first-child{
+    color: #1877F2;
+}
+.buttoncontainer :last-child{
+    color:#be9107
+}
+
+.member{
+    margin:10px auto;
+    color:#333 ;
+    font-size: 16px;
+    margin-top: 60px;
+}
+a{text-decoration: none;}
+button{cursor: pointer;}
+.inner{
+    position: absolute;
+    background:-webkit-linear-gradient(right,#00dbde,#fc00ff,#00dbde,#fc00ff);
+    width:300%;
+    height: 100%;
+    left:-100%;
+    transition: all 0.2s ease-in-out;
+    z-index: -1;
+}
+.fbutton{
+    width:100%;
+    color:white;
+    font-size: 22px;
+    border: none;
+    padding:8px 16px;
+    font-size: 22px;
+    background: none;}
+.buttoncontainer0{
+    margin:10px auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 555;
+}
+.buttoncontainer0:hover .inner{
+    left:0;
+}
+.passwordcontainer{
+    position:relative;
+    margin: 30px auto;
+    width:100%;
+
+
+}
+#showbtn{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    right: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    display: none;
+  user-select: none;
+
+}
+.inpp{
+    margin:0;
+    width:100%;
+  padding-right: 70px;
+
+}
+.emailcontainer{
+    position: relative;    
+    margin:30px auto;
+
+}
+pre{
+    color: grey;
+    position:absolute;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    left:15px;
+    transition: all 0.3s ease;
+    pointer-events: none;
+
+}
+input:focus ~ pre ,input:valid ~ pre{
+    font-size:16px;
+    background-color: white;
+    top:0;
+    transform: translateY(-50%);
+    color: skyblue;
+}
+input:focus{border-color: skyblue ;}

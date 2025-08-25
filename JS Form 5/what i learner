@@ -1,0 +1,15 @@
+input:valid {} mate5dem ken ki ykoun eli f el input <input minlength='...' required max='...'> valid 
+required with valid , only if input is not empty
+
+when facing a hard problem to build , better use a container for it (placeholder moves , background linear gradient moves ...)
+
+user-select:none  (maysirech select m3a double click
+
+pointer-event:none , ignored completely bu cursor
+
+
+
+
+
+
+

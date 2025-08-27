@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins';
+}
+body{
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 255, 0.541),rgba(172, 1, 172, 0.534));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width:500px;
+    min-height: 200px;
+    padding: 25px;
+    background-color: white;
+}
+.container h1{
+    color:blue;
+    font-size: 30px;
+    text-transform: capitalize;
+    margin: auto;
+    text-align: center;
+}
+.input{
+    padding:10px;
+    display: block;
+    height: auto;
+    width: 450px;
+    margin:20px auto;
+    font-size: 20px;
+    max-height: 400px;
+    height: 60px;
+    caret-color: red;
+}
+  </style>
+</head>
+<body>
+    <section class="container">
+        <h1>Auto resize text area</h1>
+        <textarea class="input" spellcheck="true" placeholder="Enter a text" oninput="resize()"></textarea>
+    </section>
+    <script>
+        const textarea = document.querySelector('textarea')
+        function resize(){
+            textarea.style.height='60px'
+            let h = textarea.scrollHeight
+            textarea.style.height=h+'px'
+        }
+
+    </script>
+    
+</body>
+</html>

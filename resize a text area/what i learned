@@ -1,0 +1,21 @@
+use    el.scrollHeight to return the scrolling height
+
+use spellcheck='true' for automatically underline spelling errors inside a textarea
+
+textArea is automatically resisable ====>   resise:none 
+
+
+        Height      VS         Max-height
+
+      height to start          height will never depass Maxheight value
+      with     
+
+
+Who dominates ? Max  height always dominates ====> when height > maxheight ===> height is set to maxheight
+
+caret-color howa couleur text cursor
+
+
+
+
+

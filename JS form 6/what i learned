@@ -1,0 +1,5 @@
+accent-color ====>color inside checkbox
+
+label for = checkbox id ====> when label clicked , checkbox toggles
+
+box-shadow : 5px 5px 10px is a convenient commun practice for forms (5-5-10)

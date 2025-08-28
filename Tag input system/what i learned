@@ -1,0 +1,4 @@
+window.onload = ()=>{ input.focus() }
+
+use elment.remove() directly
+

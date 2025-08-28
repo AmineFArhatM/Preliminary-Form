@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Damdam</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tags</h1>
+        <p>Press 'Enter' or add a comma ' , ' after each tag</p>
+        <ul><input onkeyup="addtag(event)"></ul>
+
+    </div>
+<script>
+    const ul = document.querySelector('ul')
+    const input = document.querySelector('input')
+
+    
+    function additem(x){
+        ul.insertBefore(x,input)
+    }
+    function remove(x){ul.removeChild(x)}
+    function addtag(e){
+        let v = input.value.trim()
+        v = v.replace(/,/g, '');
+        if (v=='' || (e.key!=='Enter' &&e.key!==',')){return}
+        let li = document.createElement('li')
+        li.textContent=v
+        let span = document.createElement('span')
+        li.appendChild(span)
+        additem(li)
+        input.value=''
+    }
+
+        function removetag(e) {
+            let t = e.target
+            if (t.tagName !== 'SPAN') return
+            t.parentElement.remove()  // remove the <li>
+        }
+    document.addEventListener('click',removetag)
+    
+    window.onload = function (){input.focus()}
+
+</script>
+
+</body>
+</html>

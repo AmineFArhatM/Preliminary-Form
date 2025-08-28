@@ -2,3 +2,4 @@ window.onload = ()=>{ input.focus() }
 
 use elment.remove() directly
 
+inline elements( a , span , i ) down work well with border radius:50% ====> you have to set height and width

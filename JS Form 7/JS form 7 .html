@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Famdam Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <div class="container">
+
+
+        <form class="login">
+            <h2>Login</h2>
+            <input placeholder="Email">
+
+            <div class="inpcontainer">
+                <input placeholder='Password' type="Password"  id="password1" required>
+                <i class="fa-solid fa-eye" id="hide1" onclick="hidefunction1()"></i>
+            </div>
+
+            <p><a href='+'>Forgot password?</a></p>
+            <button>login</button>
+            <p>Don't have an account? <span id = gotosignup onclick="gosignup()">SIgnup</span></p>
+        </form>
+
+
+        <form class="signup">
+            <h2>Signup</h2>
+            <input placeholder="Email" type="email" required>
+            <input placeholder='Password' type="Password" id="password3"required>
+
+            <div class="inpcontainer">
+                <input placeholder='confirm password' type="Password" id="password2">
+                <i class="fa-solid fa-eye" id="hide2" onclick="hidefunction2()"></i>
+            </div>
+
+            <button>Signup</button>
+            <p>Already have an account? <span id="gotologin" onclick="gologin()">Login</span></p>
+        </form>
+        
+
+        <form class="thirdpart">
+            <p>Or</p>
+            <div class="buttoncontainer">
+                <button class="facebook"><i class="fa-brands fa-facebook-f"></i>Login with Facebook</button>
+            </div>
+            <div class="buttoncontainer">
+                <button class="google">Login with google</button>
+                <img src="g.webp">
+            </div>
+        </form>
+
+    </div>
+
+    <script>
+
+        const hide1 = document.getElementById('hide1')
+        const password1 = document.getElementById('password1')
+
+        const hide2 = document.getElementById('hide2')
+        const password2 = document.getElementById('password2')
+        const password3 = document.getElementById('password3')
+
+        const gotologin = document.getElementById('gotologin')
+        const gotosignup = document.getElementById('gotosignup')
+        const signup = document.querySelector('.signup')
+        const login = document.querySelector('.login')
+
+        function hidefunction1(){
+            hide1.className='fa-solid fa-eye'
+            if (password1.type=='text'){password1.type='password'}
+            else{
+                password1.type='text'
+                hide1.className='fa-solid fa-eye-slash'}}
+
+
+        function hidefunction2(){
+            hide2.className='fa-solid fa-eye'
+            if (password2.type=='text'){password2.type='password';password3.type='password'}
+            else{
+                password2.type='text'
+                password3.type='text'
+                hide2.className='fa-solid fa-eye-slash';
+            }}
+        function gologin(){
+            signup.style.display='none'
+            login.style.display='block'
+        }
+        function gosignup(){
+            signup.style.display='block'
+            login.style.display='none'     
+        }
+
+    </script>    
+</body>
+</html>

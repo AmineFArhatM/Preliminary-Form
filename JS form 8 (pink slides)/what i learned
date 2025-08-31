@@ -1,0 +1,3 @@
+in case of a transition , why you should specify an initial value ?
+without an initial value, the browser has nothing to animate from, so it just jumps. ===> always specify an initial value for transitions
+

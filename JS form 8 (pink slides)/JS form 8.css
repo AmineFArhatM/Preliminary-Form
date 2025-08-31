@@ -1,0 +1,159 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: skyblue;
+  background: linear-gradient(to right, #a445b2, #fa4299);
+
+
+    height: 100vh;}
+ .maincontainer{
+    background-color: white;
+    width: 400px;
+    max-width: 400px;
+    overflow:hidden;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.336);
+}
+.partcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200%;
+    background-color: white;
+    position: relative;
+    transition:all 0.6s ease;
+    left:0
+
+
+}
+.cell{
+    flex:1;
+    padding: 20px;
+    padding-bottom: 0;
+}
+.cell h1{
+    margin:auto;
+    text-align: center;
+    font-size: 32px;
+}
+.buttoncontainer{
+    width:100%;
+    padding: 20px;
+    padding-bottom: 0;
+}
+.buttondiv{
+    margin:10px auto;
+    height: 50px;
+    position: relative;
+    z-index: 555;
+    overflow: hidden;
+}
+.buttondiv button{
+    height: 100%;
+    border-radius: 5px;
+    width:50%;
+    outline: none;
+    border: 1px solid silver;
+    font-size: 18px;
+    color: black;
+    float: left;
+    font-weight: 500;
+    background: none;
+    cursor: pointer;
+}
+.movingdiv{
+    background:-webkit-linear-gradient(left, #a445b2, #fa4299);
+    height: 100%;
+    width:50%;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    top:0;
+    z-index: -1;
+    transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+button.selected{color:white;  pointer-events: none;}
+button.notselected{color:black}
+input{
+    height: 50px;
+    width: 100%;
+    margin: 30px auto;
+    font-size: 16px;
+    padding: 5px 5px 5px 10px;
+    border-radius: 8px;
+    display: block;
+    outline: none;
+    border: 1px solid grey;
+    margin-top: 0px;
+}
+input:focus{border-color: #fa4299;}
+.buttoncontainer2{
+    width: 100%;
+    position: relative;
+    z-index: 111;
+    overflow: hidden;
+    margin: 10px auto;
+    margin-bottom: 30px;
+    border-radius: 8px;
+
+
+}
+.buttoncontainer2 > button{
+    width:100%;
+    height:50px;
+    border-radius: 8px;
+    border: none;outline: none;
+    background: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+}
+.inner{
+    height: 100%;
+    width: 300%;
+    position: absolute;
+    background: -webkit-linear-gradient(right, #a445b2, #fa4299, #a445b2, #fa4299);/*chnowe l far9 bin webkit w l3adeya , ma3a fazet 300% et 4 parameters*/
+    top:0;
+    left:-100%;
+    z-index: -1;
+    transition: all .5s ease;
+}
+.buttoncontainer2:hover .inner{
+    left:0
+}
+p{
+    margin:0 auto;
+}
+a{
+    text-decoration: none;    color: red;
+
+}
+a:hover{
+    text-decoration: underline;
+}
+.last{
+    margin-bottom: 5px;
+}
+p.question{
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+.partcontainer.top{top:0}
+.partcontainer.bottom{bottom:0}
+p.forgotpassword{
+    margin-bottom: 20px;
+}
+p.question a{
+    cursor: pointer;
+}

@@ -1,3 +1,8 @@
 in case of a transition , why you should specify an initial value ?
 without an initial value, the browser has nothing to animate from, so it just jumps. ===> always specify an initial value for transitions
 
+kifech na3mel a separate div w n5aleha background lel button ? 
+      Absolutely positioned <div> 
+      z-index lower than button (or lower than container)
+      Button has background: none 
+

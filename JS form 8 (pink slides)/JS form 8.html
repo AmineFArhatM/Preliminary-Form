@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="maincontainer">
+
+        <div class="partcontainer top">
+            <div class="cell">
+                <h1>Login Form</h1>
+            </div>
+            <div class="cell">
+                <h1>Signup Form</h1>
+            </div>
+        </div>
+
+        <div class="buttoncontainer">
+            <div class="buttondiv">
+                <button class="selected" id="loginbtn">Login</button>
+                <button class="notselected" id="signupbtn">Signup</button>
+                <div class="movingdiv"></div>
+            </div>
+        </div>
+
+        <div class="partcontainer bottom">
+            <form class="cell">
+                <input placeholder="Email">
+                <input placeholder="Password" class='last' type="password">
+                 <p class="forgotpassword"><a href="+" >Forgot password?</a></p>
+                <div class="buttoncontainer2">
+                    <button>Login</button>
+                    <div class="inner"></div>
+                </div>
+                <p class="question">Not a member? <a  id="signupbtn2">Signup now</a></p>
+            </form>
+            <form class='cell'>
+                <input placeholder="Email">
+                <input placeholder="password" type="password">
+                <input placeholder="confirm password" type="password">
+                <div class="buttoncontainer2">
+                    <button>Login</button>
+                    <div class="inner"></div>
+                </div>
+
+            </form>
+        </div>
+
+
+    </section>
+    <script>
+        const part = document.querySelectorAll('.partcontainer')
+        const signupbtn = document.querySelector('#signupbtn')
+        const signupbtn2 = document.querySelector('#signupbtn2')
+
+        const loginbtn = document.querySelector('#loginbtn')
+        const movingdiv = document.querySelector('.movingdiv')
+        function gologin(){
+            for (let x of part){x.style.left='0'}
+            signupbtn.className='notselected'
+            loginbtn.className='selected'
+            movingdiv.style.left='0'
+        }
+        function gosignup(){
+            for (let x of part){x.style.left='-100%'}
+            signupbtn.className='selected'
+            loginbtn.className='notselected'
+            movingdiv.style.left='50%'
+        }
+        signupbtn.onclick = gosignup
+        signupbtn2.onclick = gosignup
+
+        loginbtn.onclick=gologin
+
+
+    </script>
+
+
+    
+</body>
+</html>

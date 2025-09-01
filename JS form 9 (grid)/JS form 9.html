@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="wnameth=device-wnameth, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+</head>
+<body>
+    <section class="container">
+        <h3 class="maintitle">Registration</h3>
+        <form>
+
+            <div class="formcontainer">
+                    <div class="title">Personal Details</div>
+                    <div class="cell">
+                        <label for = 'fullname'>Full Name</label>
+                        <input name="fullname" placeholder="Enter your full name">
+                    </div>
+                    <div class="cell">
+                        <label for = 'birthday'>Date of birth</label>
+                        <input name="birthday" type="date">
+                    </div>
+                    <div class="cell">
+                        <label for = 'email'>Email</label>
+                        <input name="email" type="email" placeholder="Enter Email">
+                    </div>
+                    <div class="cell">
+                        <label for = 'phonenumber'>Phone number</label>
+                        <input name="phonenumber" type="number" placeholder="Enter Phone Number">
+                    </div>
+                    <div class="cell">
+                        <label for = 'Gender'>Gender</label>
+                        <select name="gender" name="gender" required>
+                        <option value="" disabled selected >Select gender</option>qsqsd
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                        </select>
+                        <!--review select and options-->
+                    </div>
+                    <div class="cell">
+                        <label for = 'occupation'>Occupation</label>
+                        <input name="occupation" placeholder="Enter Occupation">
+                    </div>
+                    <div class="title">Identity Details</div>
+                    <div class="cell">
+                        <label for = 'idtype'>ID type</label>
+                        <input name="idtype" placeholder="Enter ID type">
+                    </div>
+                    <div class="cell">
+                        <label for = 'id'>ID Number</label>
+                        <input name="id" placeholder="Enter ID" type="number">
+                    </div>
+                    <div class="cell">
+                        <label for = 'authority'>Issued authority</label>
+                        <input name="authority" placeholder="Enter ID type">
+                    </div>
+                    <div class="cell">
+                        <label for = 'state'>ID type</label>
+                        <input name="state" placeholder="Enter issued state">
+                    </div>
+                    <div class="cell">
+                        <label for = 'issuedate'>ID type</label>
+                        <input name="issuedate" placeholder="Enter issued state" type="date">
+                    </div>
+                    <div class="cell">
+                        <label for = 'expiracydate'>Expiracy date</label>
+                        <input name="expiracydate" type="date">
+                    </div>
+                    <div class="buttonscontainer">
+                        <button id="nextbtn" >Next<i class="fa-solid fa-arrow-right-long"></i></button>
+                    </div>
+            </div>
+
+
+            <div class="formcontainer">
+                    <div class="title">Adress details</div>
+                    <div class="cell">
+                        <label for = 'adresstype'>Adress type</label>
+                        <input name="adresstype" placeholder="Enter adress type">
+                    </div>
+                    <div class="cell">
+                        <label for = 'Nationality'>Nationality</label>
+                        <input name="Nationality" placeholder="Enter nationality">
+                    </div>
+                    <div class="cell">
+                        <label for = 'state'>Enter your state</label>
+                        <input name="state" placeholder="Enter your state">
+                    </div>
+                    <div class="cell">
+                        <label for = 'district'>Enter your district</label>
+                        <input name="district" placeholder="Enter your district">
+                    </div>
+                    <div class="cell">
+                        <label for = 'blocknumber'>Block number</label>
+                        <input name="blocknumber" placeholder="Enter your blocknumber">
+                    </div>
+                    <div class="cell">
+                        <label for = 'wardnumber'>Ward number</label>
+                        <input name="wardnumber" placeholder="Enter your ward number">
+                    </div>
+                    <div class="title">Family Details</div>
+                    <div class="cell">
+                        <label for = 'fathername'>Father's name</label>
+                        <input name="fathername" placeholder="Enter your father's naùe">
+                    </div>
+                    <div class="cell">
+                        <label for = 'mothername'>Mother's name</label>
+                        <input name="mothername" placeholder="Enter your mother's name">
+                    </div>
+                    <div class="cell">
+                        <label for = 'grandfather'>grandfather's name</label>
+                        <input name="grandfather" placeholder="Enter your grandfather's name">
+                    </div>
+                    <div class="cell">
+                        <label for = 'spouse'>Spouse name</label>
+                        <input name="spouse" placeholder="Enter your Spouse's name">
+                    </div>
+                    <div class="cell">
+                        <label for = 'fatherinlaw'>Father in law</label>
+                        <input name="fatherinlaw" placeholder="Enter your father in law name">
+                    </div>
+                    <div class="cell">
+                        <label for = 'motherinlaw'>Mother in law</label>
+                        <input name="motherinlaw" placeholder="Mother in law">
+                    </div>
+                    <div class="buttonscontainer">
+                        <button id="backbtn"><i class="fa-solid fa-arrow-left-long" ></i>back</button>
+                        <button type="button">Submit<i class="fa-solid fa-arrow-right-long"></i></button>
+                    </div>
+
+            </div>
+        </form>
+
+    </section>
+    <script>
+        const form = document.querySelector('form')
+        const nextbtn = document.querySelector('#nextbtn')
+        const backbtn = document.querySelector('#backbtn')
+        function gonext(e){
+            e.preventDefault()
+            form.style.left='-100%'
+        }
+        function goback(e){
+            e.preventDefault()
+            form.style.left='0'
+    }
+        nextbtn.onclick = gonext
+        backbtn.onclick = goback
+    </script>
+    
+</body>
+</html>

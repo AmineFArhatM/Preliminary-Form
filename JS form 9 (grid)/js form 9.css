@@ -4,7 +4,7 @@
     margin: 0;padding: 0;box-sizing: border-box;font-family: 'Poppins',Arial, Helvetica, sans-serif;
 }
 body{
-    display: flex;align-items: center;justify-content: center;background-color: rgba(52, 152, 219, 1); /* fully opaque */;height: 100vh;
+    display: flex;align-items: center;justify-content: center;background-color: rgba(52, 152, 219, 1); /* fully opaque */;min-height: 100vh;
 }
 .container{
     background-color: white;
@@ -15,6 +15,7 @@ body{
     min-height: 300px;
     padding-bottom: 10px;
     overflow: hidden;
+    margin:5px
 }
 h3.maintitle{
     letter-spacing: 1px;
@@ -94,3 +95,25 @@ form .formcontainer .buttonscontainer button:hover{
 }
 .fa-solid.fa-arrow-right-long{margin-left: 10px;}
 .fa-solid.fa-arrow-left-long{margin-right: 10px;}
+
+@media (max-width:800px){
+     form div.formcontainer{
+        grid-template-columns: repeat(2, 1fr);
+        padding:20px}
+
+    form .formcontainer .title{
+        grid-column: 1 / span 2;
+    }
+form .formcontainer .buttonscontainer{
+    grid-column: 1 / span 2;}}
+form{transition: all 0.6s ease;}
+@media (max-width:450px){
+     form div.formcontainer{
+        grid-template-columns: repeat(1, 1fr);
+        padding:20px}
+
+    form .formcontainer .title{
+        grid-column: 1 / span 1;
+    }
+form .formcontainer .buttonscontainer{
+    grid-column: 1 / span 1;}}
